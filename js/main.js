@@ -6,6 +6,7 @@ let doneTaskCount = 0;
 addButton.addEventListener("click", function () {
   const taskInput = document.getElementById("task-input");
 
+ if(taskInput.value != ''){
   const div = document.createElement("div");
   const para = document.createElement("p");
   const button = document.createElement("button");
@@ -26,6 +27,9 @@ addButton.addEventListener("click", function () {
   taskInput.value = "";
   buttonListener();
   upDateResult();
+ }else{
+   alert('Input Feild required!')
+ }
 });
 
 function buttonListener() {
